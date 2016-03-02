@@ -7,4 +7,4 @@ Rational and description is coming soon...
 
 ## Copyright and License
 Copyright &copy; 2016 Brian Adkins  
-Axio Web Framework license is TBD
+Axio Web Framework source code is licensed under the [MIT License](https://github.com/AxioWebFramework/axio/blob/master/LICENSE.md)

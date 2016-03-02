@@ -10,7 +10,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 -->
 ![](https://avatars1.githubusercontent.com/u/17581796?v=3&s=200)
 # Axio Framework
-Rational and description is coming soon...
+Rationale and description is coming soon...
 ## Important Links
 * [The Racket Language](http://racket-lang.org/)
 * [Issue Tracker](https://github.com/AxioWebFramework/axio/issues)

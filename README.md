@@ -41,19 +41,29 @@ Consider:
 ### Routing
 Consider:
 
-* [Ruby: Roda](http://roda.jeremyevans.net/why.html)
+* Ruby: Roda
+    *  [website](http://roda.jeremyevans.net/why.html)
+    *  [github](https://github.com/jeremyevans/roda)
 
 ### Input Validation
 ### Session Handling
 ### View Templates
 ### Web Sockets
 ### Database
+Consider:
+
+* [Ecto](https://github.com/elixir-lang/ecto)
+* [Diesel](http://diesel.rs/)
+* [Snooze](http://planet.racket-lang.org/package-source/untyped/snooze.plt/2/9/planet-docs/snooze/index.html)
+
 ### Security
 
 * Cross-site scripting
 * SQL injection
 * etc.
 
+### Continuations
+[According to Jay](https://groups.google.com/d/msg/racket-users/bTBj-RbMLDA/k80HNazuFAAJ), the web-server/servlet module uses continuations, but everything else in the web server does not.
 ### Other
 
 * Background tasks

@@ -29,7 +29,15 @@ Purely in the interest of time, the following are presently assumed:
 
 ## Architecture Ideas
 ### Bootstrapping
+### Web Server
+
+* [Puma](http://puma.io/)
+
 ### Web Server Interface
+Allow for *plugging* functions into the request/response pipeline. One motivating personal example is a server-side fix for a syntax error in a request from an iPad client which would've taken too long to push through Apple approval. The solution was a simple function injected into Rack middleware.
+
+[Mailing list discussion](https://groups.google.com/forum/?hl=en#!topic/racket-users/M4byu6k7iNc)
+
 Consider:
 
 * [Ruby: Rack](http://rack.github.io/)
@@ -37,6 +45,10 @@ Consider:
 * others?
 
 ### Authentication
+* HTTP Basic
+* HTTP Digest
+* Form based
+
 ### Authorization
 ### Routing
 Consider:
@@ -46,21 +58,43 @@ Consider:
     *  [github](https://github.com/jeremyevans/roda)
 
 ### Input Validation
+* Some Rails validators
+    * inclusion_of
+    * numericality_of
+    * presence_of
+    * absence_of
+    * format_of - regex matching
+    * uniqueness_of (database interaction)
+
 ### Session Handling
+### Flash
+### Controller Filters
 ### View Templates
+[web-server/templates](https://docs.racket-lang.org/web-server/templates.html   )
 ### Web Sockets
+Consider:
+
+* [Rails ActionCable](https://github.com/rails/rails/tree/master/actioncable)
+
 ### Database
 Consider:
 
 * [Ecto](https://github.com/elixir-lang/ecto)
 * [Diesel](http://diesel.rs/)
 * [Snooze](http://planet.racket-lang.org/package-source/untyped/snooze.plt/2/9/planet-docs/snooze/index.html)
+* [Persistent](http://www.yesodweb.com/book/persistent)
 
 ### Security
 
 * Cross-site scripting
 * SQL injection
 * etc.
+
+### Code Reloading
+The ability to simply refresh the browser after changing code and have the new file automatically loaded is extremely helpful.
+
+### Logging
+* Associate log records from the same request e.g. thread/process id
 
 ### Continuations
 [According to Jay](https://groups.google.com/d/msg/racket-users/bTBj-RbMLDA/k80HNazuFAAJ), the web-server/servlet module uses continuations, but everything else in the web server does not.

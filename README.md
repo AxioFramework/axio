@@ -27,9 +27,33 @@ Purely in the interest of time, the following are presently assumed:
 * Database: **Postgres**
 * Front end http server (for proxying, ssl, etc.): **Nginx**
 
+## Racket Web Links
+* [Spin](https://github.com/dmac/spin)
+
+## Documentation
+Notes from a helpful IRC #racket conversation:
+
+* Add a mydocs.scrbl file, using #lang scribble/manual
+* To compile by hand:
+`scribble --html --redirect-main http://docs.racket-lang.org/ +m myfile.scrbl`
+* To have cross-references between your own files, you need this too: 
+`--info-out myfile.sxref ++info-in other1.sxref ++info-in other2.sxref ++info-in other3.sxref …`
+* Make cross-references with `@section[#:tag "unique-name-across-all-files"]{My section}` and later (or in another file): `@secref{unique-name-across-all-files}` (hoping I didn't make any mistakes)
+* if you're building a package, raco pkg install should build the docs too if you configured the package's info.rkt and other files properly.
+
+Other info:
+
+* [Scribble Docs](https://docs.racket-lang.org/scribble/index.html)
+* Examples:
+    * [Threading package](https://github.com/lexi-lambda/threading/blob/master/scribblings/threading.scrbl)
+    * [String module](https://github.com/racket/racket/blob/master/pkgs/racket-doc/scribblings/reference/strings.scrbl)
+
 ## Architecture Ideas
 ### Bootstrapping
 ### Web Server
+* Allow for graceful restarts e.g. the equivalent of kill -USR2 for Unicorn
+
+Consider:
 
 * [Puma](http://puma.io/)
 
@@ -77,6 +101,10 @@ Consider:
 * [Rails ActionCable](https://github.com/rails/rails/tree/master/actioncable)
 
 ### Database
+* Migrations
+* Functional query building
+* Caching
+
 Consider:
 
 * [Ecto](https://github.com/elixir-lang/ecto)

@@ -52,6 +52,7 @@ Other info:
 ### Bootstrapping
 ### Web Server
 * Allow for graceful restarts e.g. the equivalent of kill -USR2 for Unicorn
+* Consider technical implications of streaming
 
 Consider:
 
@@ -75,6 +76,10 @@ Consider:
 
 ### Authorization
 ### Routing
+See [Routing.md](https://github.com/AxioWebFramework/axio/blob/master/Routing.md)
+
+* URL currying? i.e. (curry my-helper-url a b) vs. (my-helper a b c) and produce a partial URL
+
 Consider:
 
 * Ruby: Roda
@@ -115,7 +120,9 @@ Consider:
 ### Security
 
 * Cross-site scripting
+* Cross-site request forgery
 * SQL injection
+* String escaping
 * etc.
 
 ### Code Reloading

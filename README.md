@@ -65,6 +65,7 @@ Allow for *plugging* functions into the request/response pipeline. One motivatin
 
 Consider:
 
+* [Elixir: Plug](https://github.com/elixir-lang/plug)
 * [Ruby: Rack](http://rack.github.io/)
 * [Python: WSGI](https://www.python.org/dev/peps/pep-3333/)
 * others?
@@ -127,6 +128,11 @@ Consider:
 
 ### Code Reloading
 The ability to simply refresh the browser after changing code and have the new file automatically loaded is extremely helpful.
+
+### Asset Handling
+* Minimize javascript/css
+* Consolidate multiple javascript/css files
+* Don't repeat the mistakes of the Rails *asset pipeline*
 
 ### Logging
 * Associate log records from the same request e.g. thread/process id

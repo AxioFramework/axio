@@ -52,4 +52,8 @@ The first two arguments (url-pattern function) are required, so they're position
 
 Instead of:  #:verbs (get)    would it be better to have  #:verbs get  and dynamically check for an atom vs. list ?
 
+Consider *not* allowing intra-node params. For example, *disallow* "/foo/bar-:id" Instead this could be handled with "/foo/:id" *plus* a constraint that the id is of the form `/bar-(\d+)/`
+
 My initial goal is just for the "base" syntax. Sugar can be added later for some cases.
+
+[Racket mailing list thread](https://groups.google.com/forum/?hl=en#!topic/racket-users/wZ07AM8SBuw)

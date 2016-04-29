@@ -36,7 +36,7 @@ Notes from a helpful IRC #racket conversation:
 * Add a mydocs.scrbl file, using #lang scribble/manual
 * To compile by hand:
 `scribble --html --redirect-main http://docs.racket-lang.org/ +m myfile.scrbl`
-* To have cross-references between your own files, you need this too: 
+* To have cross-references between your own files, you need this too:
 `--info-out myfile.sxref ++info-in other1.sxref ++info-in other2.sxref ++info-in other3.sxref …`
 * Make cross-references with `@section[#:tag "unique-name-across-all-files"]{My section}` and later (or in another file): `@secref{unique-name-across-all-files}` (hoping I didn't make any mistakes)
 * if you're building a package, raco pkg install should build the docs too if you configured the package's info.rkt and other files properly.
@@ -68,6 +68,7 @@ Consider:
 * [Elixir: Plug](https://github.com/elixir-lang/plug)
 * [Ruby: Rack](http://rack.github.io/)
 * [Python: WSGI](https://www.python.org/dev/peps/pep-3333/)
+* [Scala: Finch](https://github.com/finagle/finch)
 * others?
 
 ### Authentication
@@ -86,6 +87,7 @@ Consider:
 * Ruby: Roda
     *  [website](http://roda.jeremyevans.net/why.html)
     *  [github](https://github.com/jeremyevans/roda)
+* [Scala: Finch](https://github.com/finagle/finch)
 
 ### Input Validation
 * Some Rails validators
@@ -95,6 +97,7 @@ Consider:
     * absence_of
     * format_of - regex matching
     * uniqueness_of (database interaction)
+* Finch uses [functions](https://github.com/finagle/finch/blob/master/docs/endpoint.md#validation)
 
 ### Session Handling
 ### Flash
@@ -117,6 +120,7 @@ Consider:
 * [Diesel](http://diesel.rs/)
 * [Snooze](http://planet.racket-lang.org/package-source/untyped/snooze.plt/2/9/planet-docs/snooze/index.html)
 * [Persistent](http://www.yesodweb.com/book/persistent)
+* [JOOQ](http://www.jooq.org/)
 
 ### Security
 
@@ -148,6 +152,11 @@ The ability to simply refresh the browser after changing code and have the new f
 * JSON
 * New project code generation
 * Testing
+* Continuous Integration
+* Continuous Deployment
+* Open Source Reporting Services
+  - Test Reporting
+  - Code Coverage Reporting
 
 ## Links
 * [The Racket Language](http://racket-lang.org/)

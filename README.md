@@ -163,5 +163,5 @@ The ability to simply refresh the browser after changing code and have the new f
 * [Issue Tracker](https://github.com/AxioWebFramework/axio/issues)
 
 ## Copyright and License
-Copyright &copy; 2016 Brian Adkins  
+Copyright &copy; 2016-2018 Brian Adkins  
 Axio Framework source code is licensed under the [MIT License](https://github.com/AxioWebFramework/axio/blob/master/LICENSE.md)

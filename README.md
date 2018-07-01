@@ -45,7 +45,7 @@ Other info:
 
 * [Scribble Docs](https://docs.racket-lang.org/scribble/index.html)
 * Examples:
-    * [Threading package](https://github.com/lexi-lambda/threading/blob/master/scribblings/threading.scrbl)
+    * [Threading package](https://github.com/lexi-lambda/threading/blob/master/threading-doc/scribblings/threading.scrbl)
     * [String module](https://github.com/racket/racket/blob/master/pkgs/racket-doc/scribblings/reference/strings.scrbl)
 
 ## Architecture Ideas

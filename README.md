@@ -1,6 +1,6 @@
 <!--
 # The MIT License (MIT)
-Copyright (c) 2016 Brian Adkins
+Copyright (c) 2016-2019 Brian Adkins
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -13,6 +13,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 My goal for the **Axio** Framework is to extend the same joy of coding, expressive power, elegance and efficiency to the *specific* area of web application development as is already provided by **Racket** more *generally*.
 
 For the time being, this README will be a sketchpad of ideas that will eventually coalesce into Axio.
+
+**Status update:** Although there has been little activity in this repository, I have been developing applications in Racket on a full time basis since November, 2018. After attending Racket Summer School in July, some of the macro-coding skills I'll need are coming along. I'm currently developing a significant web application in Racket for a startup, and I will be working on extracting the good parts into the Axio Framework over the next few months.
 ## Aspirations
 * A **community** of leaders and contributors that is genuinely kind, thoughtful, patient and effective.
 * A **codebase** that is correct, clear, concise, efficient and valuable.
@@ -121,6 +123,7 @@ Consider:
 * [Snooze](http://planet.racket-lang.org/package-source/untyped/snooze.plt/2/9/planet-docs/snooze/index.html)
 * [Persistent](http://www.yesodweb.com/book/persistent)
 * [JOOQ](http://www.jooq.org/)
+* [Racquel](https://docs.racket-lang.org/racquel/index.html)
 
 ### Security
 
@@ -163,5 +166,5 @@ The ability to simply refresh the browser after changing code and have the new f
 * [Issue Tracker](https://github.com/AxioWebFramework/axio/issues)
 
 ## Copyright and License
-Copyright &copy; 2016-2018 Brian Adkins  
+Copyright &copy; 2016-2019 Brian Adkins
 Axio Framework source code is licensed under the [MIT License](https://github.com/AxioWebFramework/axio/blob/master/LICENSE.md)

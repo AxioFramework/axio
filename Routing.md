@@ -8,7 +8,7 @@ For each route, I'll need the following information:
 
 * Function to handle request (required)
 
-* Accepted HTTP verbs (optional, defaults ot all)
+* Accepted HTTP methods (optional, defaults to all)
 
 * Name (optional) - used to do "reverse routing" i.e. produce a URL from parameters
 
@@ -24,7 +24,7 @@ Foo::Application.routes.draw do
   # URL pattern: "/:org_shortname/product_image/:style/:filename"
   # Function: ProductImagesController.product_image
   # Name: :product_image
-  # Verbs: GET
+  # Methods: GET
   # Contraints: filename param must end in .jpg
 
   match '/products/(*id).json'  => 'products#show', :via => :get
@@ -32,7 +32,7 @@ Foo::Application.routes.draw do
   # URL pattern: '/products/(*id).json'
   #    (*id) globs everything between /products/ and .json including / chars
   # Function: ProductsController.show
-  # Verbs: GET
+  # Methods: GET
 end
 ```
 
@@ -43,14 +43,17 @@ I'm thinking of something like the following:
 ```
 (routes
   ("/" home-page)
-  ("/:org_shortname/product_image/:style/:filename" product-image #:verbs (get)
-   #:name prod-image #:when (regexp-match #rx".jpg$" filename))
-  ("/products/(*id).json" product-show #:verbs (get)))
+  ("/~org_shortname/product_image/~style/~filename" product-image
+    #:methods (get)
+    #:name prod-image
+    #:when (regexp-match #rx".jpg$" filename))
+  ("/products/(*id).json" product-show
+    #:methods (get)))
 ```
 
 The first two arguments (url-pattern function) are required, so they're positional. The optional arguments are specified with keywords.
 
-Instead of:  #:verbs (get)    would it be better to have  #:verbs get  and dynamically check for an atom vs. list ?
+Instead of:  #:methods (get)    would it be better to have  #:methods get  and dynamically check for an atom vs. list ?
 
 Consider *not* allowing intra-node params. For example, *disallow* "/foo/bar-:id" Instead this could be handled with "/foo/:id" *plus* a constraint that the id is of the form `/bar-(\d+)/`
 
